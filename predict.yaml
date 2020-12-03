@@ -28,7 +28,7 @@ spec:
         - -c
         - |
           git clone https://github.com/THULiusj/gke-pytorch-inference.git
-          cd gke-pytorch-inference
+          cd gke-pytorch-inference/code
           pip install flask==1.1.2
           FLASK_ENV=development FLASK_APP=app.py flask run --host=0.0.0.0
         resources:
