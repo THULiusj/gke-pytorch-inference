@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: predict
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: predict
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
